@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="../css/style2.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    </head>
+    <body>
+        <div class="w3-main" style="margin-left: 40px; margin-right:40px">
+            <div class="w3-container" style="margin-top:80px" id="showcase">
+                <h1 class="w3-jumbo"><b>Inetify</b></h1>
+                <hr style="width:50px;border:5px solid #437008" class="w3-round">
+            </div>
+
+            <div class="slider">
+                <div class="slides">
+                    <!-- Imagem 1 -->
+                    <div class="slide">
+                        <img src="../img/logoinetify2.png" alt="Imagem 1">
+                    </div>
+                    <!-- Imagem 2 -->
+                    <div class="slide">
+                        <img src="../img/logoinetify.png" alt="Imagem 2">
+                    </div>
+                    <!-- Imagem 3 -->
+                    <div class="slide">
+                        <img src="../img/logoinetify2.png" alt="Imagem 3">
+                    </div>
+                    <!-- Imagem 4 -->
+                    <div class="slide">
+                        <img src="../img/logoinetify.png" alt="Imagem 4">
+                    </div>
+                </div>
+                <!-- Botões de navegação -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <div id="login" style="margin-top: 80px; margin-bottom: 150px;" class="w3-container">
+                <h1 class="w3-xxxlarge w3-text-red"><b>Login</b></h1>
+                <hr style="width:50px;border:5px solid #437008" class="w3-round">
+                <form id="login-form">
+                    <div class="input-with-label">
+                        <label for="username">Username</label> <br />
+                        <input type="text" name="username" />
+                    </div>
+
+                    <div class="input-with-label">
+                        <label for="password">Password</label> <br />
+                        <input type="password" name="password" />
+                        <button type="button">Show Password</button>
+                    </div>
+
+                    <br />
+
+                    <button type="submit">Login</button>
+                </form>
+                <br />
+                <a id="register-a" href="#register">Register</a>
+            </div>
+
+            <div id="register" style="margin-top: 80px; margin-bottom: 150px;" class="w3-container">
+                <h1 class="w3-xxxlarge w3-text-red"><b>Register</b></h1>
+                <hr style="width:50px;border:5px solid #437008" class="w3-round">
+                <form id="register-form">
+                    <div class="input-with-label">
+                        <label for="username">Username</label> <br />
+                        <input type="text" name="username" />
+                    </div>
+
+                    <div class="input-with-label">
+                        <label for="email">Email</label> <br />
+                        <input type="email" name="email" />
+                    </div>
+
+                    <div class="input-with-label">
+                        <label for="password">Password</label> <br />
+                        <input type="password" name="password" />
+                        <button type="button">Show Password</button>
+                    </div>
+
+                    <div class="input-with-label">
+                        <label for="confirm-password">Confirm Password</label> <br />
+                        <input type="password" name="confirm-password" />
+                        <button type="button">Show Password</button>
+                    </div>
+
+                    <br />
+
+                    <button type="submit">Register</button>
+                </form>
+                <br />
+            </div>
+
+            <footer id="footer">
+                <small>
+                    <a href="https://www.inete.pt" id="ineteCopyRight">
+                        @INETE</a> &copy; copyright reserved
+                </small>
+            </footer>
+        </div>
+
+        <script src="../src/slider.js"></script>
+        <script>
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+        </script>
+    </body>
+</html>

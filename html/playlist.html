@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link href="../css/playlist.css" rel="stylesheet" />
+        <script src="../dist/songs.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="music-player">
+            <ul id="playlist">
+            </ul>
+            <div id="controls">
+                <button id="edit-playlist">∷</button>
+                <button id="prev-button">↤</button>
+                <button id="play-button">▸</button> <!--- ▸ / ■ --->
+                <button id="next-button">↦</button>
+                <button id="random-mode-button">⤮</button>
+            </div>
+            <div id="info">
+                <span id="song-current-time">0:00</span>
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <span id="song-duration-time">0:00</span>
+            </div>
+        </div>
+
+        <audio id="song" controls hidden>
+
+        <script src="../dist/playlist.js" type="text/javascript"></script>
+    </body>
+</html>

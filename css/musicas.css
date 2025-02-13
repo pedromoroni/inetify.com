@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFFFF;
+}
+
+#songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.song-card {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.song-card img {
+    width: 100%;
+    height: auto;
+}
+
+.song-card:hover {
+    transform: scale(1.05);
+}

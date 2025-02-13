@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Inetify</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style2.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <style>
+            body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+            body {font-size:16px;}
+            .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+            .w3-half img:hover{opacity:1}
+            </style>
+        <link rel="icon" href="img/logo.png">
+    </head>
+    <body>
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px;">Close Menu</a>
+            <div class="w3-container">
+                <h1 class="w3-padding-64"><b>Inetify</b></h1>
+            </div>
+            <div class="w3-bar-block">
+                <a href="#home-title" onclick="w3_close()" id="home" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+                <a href="#iframe-div" onclick="w3_close()" id="musicas" class="w3-bar-item w3-button w3-hover-white">Músicas</a> 
+                <a href="#iframe-div" onclick="w3_close()" id="playlist" class="w3-bar-item w3-button w3-hover-white">Playlist</a> 
+                <a href="#Ranking" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ranking</a>
+                <a href="./html/login.html" target="_blank" class="w3-bar-item w3-button w3-hover-white">Login/Register</a>
+                <a href="#sobre-nos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sobre nós</a>
+
+            </div>
+        </nav>
+
+        <!-- Top menu on small screens -->
+        <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+            <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+            <span>
+                Inetify
+            </span>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+            <!-- Header -->
+            <div id="home-title" class="w3-container" style="margin-top:80px">
+                <h1 class="w3-jumbo"><b>Inetify</b></h1>
+                <hr style="width:50px;border:5px solid #437008" class="w3-round">
+            </div>
+
+            <div class="slider">
+                <div class="slides">
+                    <!-- Imagem 1 -->
+                    <div class="slide">
+                        <img src="./img/logoinetify2.png" alt="Imagem 1">
+                    </div>
+                    <!-- Imagem 2 -->
+                    <div class="slide">
+                        <img src="./img/logoinetify.png" alt="Imagem 2">
+                    </div>
+                    <!-- Imagem 3 -->
+                    <div class="slide">
+                        <img src="./img/logoinetify2.png" alt="Imagem 3">
+                    </div>
+                    <!-- Imagem 4 -->
+                    <div class="slide">
+                        <img src="./img/logoinetify.png" alt="Imagem 4">
+                    </div>
+                </div>
+                <!-- Botões de navegação -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <!-- Modal for full size images on click-->
+            <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+                <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                    <img id="img01" class="w3-image">
+                    <p id="caption"></p>
+                </div>
+            </div>
+
+            <!-- Playlist radical -->
+            <div id="iframe-div">
+                <iframe id="iframe-tag" src="./html/playlist.html"></iframe>
+            </div>
+
+            <div class="w3-container" id="Ranking" style="margin-top:75px; bottom: 150px;">
+                <h1 class="w3-xxxlarge w3-text-red"><b>Ranking</b></h1>
+                <hr style="width:50px;border:5px solid #437008" class="w3-round">
+                <h2 style="color: #437008;">
+                    musica em destque: "Anel de rubi" de Rui Veloso com cerca de 1M de vizulizações
+                </h2>
+                <p>
+                    2º "Fear of the dark"
+                </p>
+                <p>
+                    3º "Hay lupita"
+                </p>
+                <p>
+                    4º "Death dance"
+                </p>
+                <p>
+                    5º "Nos 2"
+                </p>
+                <p>
+                    6º "Alo"
+                </p>
+                <p>
+                    7º "habibi"
+                </p>
+                <p>
+                    8º "Mo boy"
+                </p>
+                <p>
+                    9º "nota 100"
+                </p>
+                <p>
+                    10º "benção"
+                </p>
+
+                <!-- Sobre Nos -->
+                <div class="w3-container" id="sobre-nos" style="margin-top:75px; bottom: 150px;">
+                    <h1 class="w3-xxxlarge w3-text-red"><b>Sobre Nós</b></h1>
+                    <hr style="width:50px;border:5px solid #437008" class="w3-round">
+                    <br><br>
+                    <div id="sobre-nos-container">
+                        <img src="./img/logo.png" id="logo">
+                        <div class="texto-sobre-nos">
+                            <p>
+                                O Inetify foi desenvolvido pelo Andriy, Pedro Moroni, Pedro Coutinho. Inetify é um site pensado para os amantes de música.
+                                Como parte de um projeto escolar, o nosso objetivo foi criar uma plataforma onde qualquer pessoa pode ouvir as suas músicas
+                                favoritas de forma simples e acessível.
+                            </p>
+                            <p>
+                                No Inetify, a música é o foco principal. Queríamos que a experiência de ouvir música fosse intuitiva e agradável, permitindo aos utilizadores explorar diversas faixas e descobrir novos sons.
+                                Acreditamos que a música conecta as pessoas, e o nosso site foi criado para tornar essa conexão ainda mais forte.
+                                Seja para relaxar, estudar ou apenas curtir uma boa playlist, o Inetify é o seu espaço ideal para mergulhar no mundo da música. Esperamos que todos aproveitem tanto quanto nós!
+                            </p>
+                        </div>
+                    </div>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <footer id="footer">
+                <small>
+                    <a target="_blank" href="https://www.inete.pt" id="ineteCopyRight">@INETE</a> &copy; copyright reserved
+                </small>
+            </footer>
+            <!-- End page content -->
+        </div>
+
+        <script src="./src/slider.js"></script>
+        <script src="./dist/index.js"></script>
+        <script>
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+        </script>
+    </body>
+</html>
